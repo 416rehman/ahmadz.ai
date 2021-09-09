@@ -3,7 +3,7 @@ const router = express.Router()
 import auth from '../../helpers/auth.js'
 
 router.get('/login', function (req, res) {
-    const url = `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIEND_ID}&redirect_uri=http://localhost:5000/api/auth/callback`
+    const url = `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIEND_ID}&redirect_uri=${process.env.CALLBACK_URL}`
     res.redirect(url)
 })
 
@@ -14,7 +14,7 @@ router.get('/callback', async function (req, res) {
     if (user) {
         req.session.access_token = access_token;
         req.session.githubId = user.id;
-        res.redirect(`http://localhost:5000`)
+        res.redirect(process.env.HOMEPAGE)
     } else {
         res.send("Login did not succeed!");
     }
@@ -22,7 +22,7 @@ router.get('/callback', async function (req, res) {
 
 router.get("/logout", (req, res) => {
     if (req.session) req.session = null;
-    return res.redirect("http://localhost:5000/");
+    return res.redirect(process.env.HOMEPAGE);
 });
 
 
