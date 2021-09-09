@@ -9,6 +9,7 @@ import Project from "../../components/Project/Project";
 import Button from "../../components/Button/Button";
 import {AiFillLinkedin} from 'react-icons/ai'
 import {SiGithub} from 'react-icons/si'
+import {AiOutlineMail} from 'react-icons/ai'
 
 export default function Home() {
     const skillsArray = skills.map(s => {
@@ -26,8 +27,9 @@ export default function Home() {
         <h1 id="title">{about.name || 'Rehman Ahmadzai'}</h1>
         <p id="bio" style={{color: '#A1A1A1'}}>{about.bio || 'I am a programmer, I like to work on games and full-stack applications.'}</p>
         <pre id={"socials"}>
-            <Button value={"LinkedIn"} href={"https://www.linkedin.com/in/rehmanahmadzai/"} icon={<AiFillLinkedin size={30} target={"_blank"}/>}/>
-            <Button value={"GitHub"} href={"https://github.com/certifiedrehman/"} icon={<SiGithub size={30} target={"_blank"}/>}/>
+            <Button value={"LinkedIn"} href={about.linkedInURL || "https://www.linkedin.com/in/rehmanahmadzai/"} icon={<AiFillLinkedin size={30} target={"_blank"}/>}/>
+            <Button value={"GitHub"} href={about.githubURL || "https://github.com/certifiedrehman/"} icon={<SiGithub size={30} target={"_blank"}/>}/>
+            <Button value={"GitHub"} href={`mailto:${about.email || 'mailto:hi@ahmadz.ai'}`} icon={<AiOutlineMail size={30} target={"_blank"}/>}/>
         </pre>
 
         <br/>
