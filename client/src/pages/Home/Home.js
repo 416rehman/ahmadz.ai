@@ -10,6 +10,7 @@ import Button from "../../components/Button/Button";
 import {AiFillLinkedin} from 'react-icons/ai'
 import {SiGithub} from 'react-icons/si'
 import {AiOutlineMail} from 'react-icons/ai'
+import Suggestions from '../../components/Suggestions/Suggestions.js'
 
 export default function Home() {
     const skillsArray = skills.map(s => {
@@ -54,5 +55,9 @@ export default function Home() {
                 {projectsArray}
             </div>
         </div>
+
+        <hr/>
+        <h1>Suggestions</h1>
+        <Suggestions/>
     </div>)
 }
