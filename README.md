@@ -1,6 +1,6 @@
 # Ahmadz.ai
 <p align="center">
-  <img src="https://img.shields.io/badge/Live-Demo-blueviolet?style=flat-square">
+  <a href="http://www.ahmadz.ai"><img src="https://img.shields.io/badge/Live-Demo-blueviolet?style=flat-square"></a>
 </p>
 Simple portfolio template built with React with backend ready to go for any advanced cloud deployment strategies.
 
