@@ -20,7 +20,7 @@ app.use(express.json());
 app.use("/auth", login);
 
 app.use(async (req, res, next) => {
-    if (req.session && req.session.githubId === 15690606) {
+    if (req.session && req.session.githubId === process.env.GITHUB_ID) {
         req.session.user = await auth.fetchGitHubUser(req.session.access_token)
         next()
     } else {

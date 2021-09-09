@@ -16,14 +16,11 @@
 }
 
 #languages {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    max-height: 230px;
-}
-
-#languages > div {
-    padding-right: 45px;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*flex-direction: column;*/
+    /*max-height: 230px;*/
+    column-width: 562px;
 }
 
 #projects .Project {
