@@ -1,10 +1,7 @@
 import './Navbar.css';
 import Admin from "./Admin";
-import {UserContext} from "../../App";
-import {useContext} from "react";
 
 export default function Navbar() {
-    const user = useContext(UserContext)
     return (
         <nav>
             <div id="links">

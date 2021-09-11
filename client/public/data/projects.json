@@ -17,7 +17,7 @@
       "label": "Blogs coming soon",
       "description": "My portfolio website, built with simplicity and focus on clean UI in mind. I designed this with future upgrades in mind, login and backend system are setup to accommodate for the eventual blogs system.",
       "madeWith": [ "react", "express", "github", "mongodb", "nodejs", "nginx" ],
-      "image": "",
+      "image": "https://i.imgur.com/luKmB1i.png",
       "links": {
         "github": "https://github.com/certifiedrehman/ahmadz.ai",
         "heroku": "",
