@@ -4,7 +4,7 @@
 </p>
 Simple portfolio template built with React with backend ready to go for any advanced cloud deployment strategies.
 
-Data is read from `client/src/data` folder and rendered on the website.
+Data is read via json files from `public/data` folder and rendered on the website (After building the app, the data folder can be found in the root directory.).
 
 **```!!!The backend is not required to use this template.!!!```**
 
