@@ -5,7 +5,9 @@
     border: solid 1px #C4C4C4;
     display: inline-flex;
     flex-direction: column;
+    width: 500px;
 }
+
 
 .Project #toolsUsed {
     padding-left: 15px;
@@ -35,7 +37,7 @@
 
 .Project > #info {
     min-height: 200px;
-    width: 500px;
+    width: 100%;
     position: relative;
     border-top: 1px solid var(--border-color);
 }
@@ -99,12 +101,9 @@
     background-color: #f1f1f1;
 }
 
-@media only screen and (max-width: 840px){
-    .Project > #info {
-        width: 450px;
-    }
 
+@media only screen and (max-width: 840px){
     .Project {
-        margin-right: 0 !important;
+        width: 100% !important;
     }
 }

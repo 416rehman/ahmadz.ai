@@ -16,16 +16,23 @@
 }
 
 #languages {
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
-    /*flex-direction: column;*/
-    /*max-height: 230px;*/
     column-width: 562px;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #projects .Project {
     margin-right: 15px;
     margin-bottom: 15px;
+}
+
+#socials {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #socials .Button {
@@ -34,17 +41,17 @@
 
 @media only screen and (max-width: 840px){
     #About{
-        padding: 15px;
+        padding: 145px 15px 15px;
     }
-    #title {
-        font-size: 50px;
-    }
+    #iam {font-size: 25px;}
+    #title { font-size: 50px; }
 
     #wholeProgressBar {
         width: 200px !important;
     }
     #languages {
         padding-right: 0;
+        column-width: 430px;
     }
 
     #projects > div {
@@ -52,5 +59,8 @@
     }
     #languages {
         max-height: unset;
+    }
+    #tools .InfoBox {
+        margin-right: 0 !important;
     }
 }
