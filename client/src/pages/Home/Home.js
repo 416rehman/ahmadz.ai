@@ -30,7 +30,7 @@ export default function Home() {
         <pre id={"socials"}>
             <Button value={"LinkedIn"} href={about.linkedInURL || "https://www.linkedin.com/in/rehmanahmadzai/"} icon={<AiFillLinkedin size={30} target={"_blank"}/>}/>
             <Button value={"GitHub"} href={about.githubURL || "https://github.com/certifiedrehman/"} icon={<SiGithub size={30} target={"_blank"}/>}/>
-            <Button value={"GitHub"} href={`mailto:${about.email || 'mailto:hi@ahmadz.ai'}`} icon={<AiOutlineMail size={30} target={"_blank"}/>}/>
+            <Button value={"Email"} href={`mailto:${about.email || 'mailto:hi@ahmadz.ai'}`} icon={<AiOutlineMail size={30} target={"_blank"}/>}/>
         </pre>
 
         <br/>
