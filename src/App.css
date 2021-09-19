@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,400;1,900&display=swap');
+
+*{
+  font-family: Roboto, serif;
+  text-decoration: none;
+  color: #dcdcdc;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#page {
+  margin-top: 50px;
+  position: absolute;
+  min-height: calc(100vh - 50px); /*50px = size of the navbar*/
+  min-width: 100%;
+  background: black url("background.png") no-repeat fixed;
+}
+
+/*Italic Placeholders*/
+::-webkit-input-placeholder { font-style: italic; }
+:-moz-placeholder { font-style: italic; }
+::-moz-placeholder { font-style: italic; }
+:-ms-input-placeholder { font-style: italic; }
+
+@media only screen and (max-width: 840px) {
+  #page{
+    margin-top: revert;
+  }
+}
