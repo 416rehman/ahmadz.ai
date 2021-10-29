@@ -1,4 +1,9 @@
-
+/**
+ * Creates a progress bar with the specified percentage
+ * @component
+ * @example
+ * <ProgressBar completed=90 width='150px' showPercentage/>
+ */
 export default function ProgressBar(props) {
     const percentage = props.completed || 0;
     const progressBarStyles= {
@@ -31,7 +36,7 @@ export default function ProgressBar(props) {
             <div id="wholeProgressBar" style={containerStyles}>
                 <div id="completedProgress" style={fillerStyles}/>
             </div>
-            <div id='ProgressBarlabel' style={labelStyles}>{percentage}%</div>
+            {props.showPercentage ? (<div id='ProgressBarlabel' style={labelStyles}>{percentage}%</div>) : ''}
         </div>
     )
 }
