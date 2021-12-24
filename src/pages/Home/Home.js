@@ -9,6 +9,7 @@ import {AiOutlineMail} from 'react-icons/ai'
 import {RiNewspaperLine} from "react-icons/ri";
 import Contact from '../../components/Suggestions/Contact.js'
 import {useEffect, useState} from "react";
+import Posts from "../../components/Posts/Posts";
 
 
 
@@ -38,47 +39,57 @@ export default function Home() {
         })
     }, [])
 
-    return about && skills && knowledge && projects ? (<div id="About">
-        <p id="iam">👋 Hi, I am</p>
-        <h1 id="title">{about.name || 'Rehman Ahmadzai'}</h1>
-        <p id="bio"
-           style={{color: '#A1A1A1'}}>{about.bio || 'I am a programmer, I like to work on games and full-stack applications.'}</p>
-        <pre id={"socials"}>
-            <Button value={"LinkedIn"} href={about.linkedInURL || "https://www.linkedin.com/in/rehmanahmadzai/"}
-                    icon={<AiFillLinkedin size={30} target={"_blank"}/>}/>
-            <Button value={"GitHub"} href={about.githubURL || "https://github.com/certifiedrehman/"}
-                    icon={<SiGithub size={30} target={"_blank"}/>}/>
-            <Button value={"Email"} href={`mailto:${about.email || 'mailto:hi@ahmadz.ai'}`}
-                    icon={<AiOutlineMail size={30} target={"_blank"}/>}/>
-            <Button value={"Blog"} href={`${about.blogURL || 'http://blog.ahmadz.ai'}`}
-                    icon={<RiNewspaperLine size={30} target={"_blank"}/>}/>
-        </pre>
+    return about && skills && knowledge && projects ? (
+        <div id="About">
+            <div className={"about-container"}>
+                <div >
+                    <p id="iam">👋 Hi, I am</p>
+                    <h1 id="title">{about.name || 'Rehman Ahmadzai'}</h1>
+                    <p id="bio"
+                       style={{color: '#A1A1A1'}}>{about.bio || 'I am a programmer, I like to work on games and full-stack applications.'}</p>
+                    <pre id={"socials"}>
+                    <Button value={"LinkedIn"} href={about.linkedInURL || "https://www.linkedin.com/in/rehmanahmadzai/"}
+                            icon={<AiFillLinkedin size={30} target={"_blank"}/>}/>
+                    <Button value={"GitHub"} href={about.githubURL || "https://github.com/certifiedrehman/"}
+                            icon={<SiGithub size={30} target={"_blank"}/>}/>
+                    <Button value={"Email"} href={`mailto:${about.email || 'mailto:hi@ahmadz.ai'}`}
+                            icon={<AiOutlineMail size={30} target={"_blank"}/>}/>
+                    <Button value={"Blog"} href={`${about.blogURL || 'http://blog.ahmadz.ai'}`}
+                            icon={<RiNewspaperLine size={30} target={"_blank"}/>}/>
+                </pre>
+                </div>
+                <Posts/>
+            </div>
 
-        <br/>
-        <br/>
-        <br/>
-        <div>
-            <h2>Programming Languages</h2>
-            <div id={`languages`}>
-                {skills}
-            </div>
-        </div>
-        <div>
-            <h2>Knowledge</h2>
-            <div id={'tools'}>
-                {knowledge}
-            </div>
-        </div>
-        <hr/>
-        <div id={'portfolio'}>
-            <h1>Projects</h1>
-            <div id={'projects'}>
-                {projects}
-            </div>
-        </div>
 
-        <hr/>
-        <h1 id={'contact'}>Get in Touch</h1>
-        <Contact/>
-    </div>) : <div>Loading</div>
+            <br/>
+            <br/>
+            <br/>
+            <div>
+                <h2>Programming Languages</h2>
+                <div id={`languages`}>
+                    {skills}
+                </div>
+            </div>
+            <br/>
+
+            <div>
+                <h2>Knowledge</h2>
+                <div id={'tools'}>
+                    {knowledge}
+                </div>
+            </div>
+            <hr/>
+            <div id={'portfolio'}>
+                <h1>Projects</h1>
+                <div id={'projects'}>
+                    {projects}
+                </div>
+            </div>
+
+            <hr/>
+            <h1 id={'contact'}>Get in Touch</h1>
+            <Contact/>
+        </div>
+    ) : <div>Loading</div>
 }

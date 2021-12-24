@@ -18,7 +18,7 @@ export default function Skill(props){
     }
     return(
         <div className={`Skill`} style={SkillStyles}>
-            <ProgressBar completed={props.percentage} width={props.width} showPercentage/>
+            <ProgressBar completed={props.percentage} width={props.width}/>
             <div style={textStyle}>{props.text}{tool}</div>
         </div>
     )

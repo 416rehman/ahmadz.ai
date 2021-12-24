@@ -10,9 +10,8 @@
 
 
 .Project #toolsUsed {
-    padding-left: 15px;
+    padding: 10px;
     display: flex;
-    height: 50px;
     align-items: center;
     font-style: normal;
     background-color: black;
