@@ -28,7 +28,7 @@ export default function Posts(props) {
     };
 
     return posts ? (
-        <div className="posts">
+        <div className="posts" style={props.style}>
             <h2>Latest Posts</h2>
             <div className={'post-container'}>
                 {
@@ -39,11 +39,10 @@ export default function Posts(props) {
             </div>
             <Button href={'https://blog.ahmadz.ai/@rehman'} target={'_blank'} value={'View More'} style={{
                 width: "100%",
-                padding: "20px",
+                padding: "10px",
                 placeContent: "center",
                 border: "1px solid rgb(82 82 82)"
             }} icon={<FiExternalLink size={30}/>}/>
         </div>
     ) : (<div>Loading</div>)
 }
-
