@@ -21,9 +21,30 @@
       "url": "https://en.cppreference.com/w/c/language"
     },
     {
+      "name": "discord",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/discord.svg",
+      "url": "https://www.discord.com/"
+    },
+    {
       "name": "Docker",
       "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/docker.svg",
       "url": "https://www.docker.com/"
+    },
+    {
+      "name": "Django",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/django.svg",
+      "url": "https://www.djangoproject.com/"
+    },
+    {
+      "name": "ElasticSearch",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/elasticsearch.svg",
+      "url": "https://www.elastic.co/"
+    },
+    {
+      "name": "Express",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/express.svg",
+      "url": "https://expressjs.com/",
+      "dark": "true"
     },
     {
       "name": "Figma",
@@ -41,6 +62,12 @@
       "url": "https://golang.org/"
     },
     {
+      "name": "Handlebars",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/handlebars.svg",
+      "url": "https://handlebarsjs.com/",
+      "dark": "true"
+    },
+    {
       "name": "Java",
       "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/java.svg",
       "url": "https://www.java.com"
@@ -51,9 +78,19 @@
       "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     },
     {
+      "name": "Linux",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/ubuntu.svg",
+      "url": "https://ubuntu.com/"
+    },
+    {
       "name": "MongoDB",
       "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/mongodb.svg",
       "url": "https://www.mongodb.com/"
+    },
+    {
+      "name": "nginx",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/nginx.svg",
+      "url": "https://www.nginx.com/"
     },
     {
       "name": "NodeJS",
@@ -86,46 +123,19 @@
       "url": "https://reactjs.org"
     },
     {
-      "name": "TypeScript",
-      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/ts.svg",
-      "url": "https://www.typescriptlang.org"
-    },
-    {
-      "name": "Linux",
-      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/ubuntu.svg",
-      "url": "https://ubuntu.com/"
-    },
-    {
-      "name": "Unreal",
-      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/unreal.svg",
-      "url": "https://www.unrealengine.com"
-    },
-    {
-      "name": "Express",
-      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/express.svg",
-      "url": "https://expressjs.com/",
-      "dark": "true"
-    },
-    {
-      "name": "Handlebars",
-      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/handlebars.svg",
-      "url": "https://handlebarsjs.com/",
-      "dark": "true"
-    },
-    {
       "name": "SQLite",
       "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/sqlite.svg",
       "url": "https://www.sqlite.org/"
     },
     {
-      "name": "discord",
-      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/discord.svg",
-      "url": "https://www.discord.com/"
+      "name": "TypeScript",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/ts.svg",
+      "url": "https://www.typescriptlang.org"
     },
     {
-      "name": "nginx",
-      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/nginx.svg",
-      "url": "https://www.nginx.com/"
+      "name": "Unreal",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/unreal.svg",
+      "url": "https://www.unrealengine.com"
     }
   ]
 }
