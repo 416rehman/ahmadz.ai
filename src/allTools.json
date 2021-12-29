@@ -1,6 +1,11 @@
 {
   "tools": [
     {
+      "name": "Access",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/access.svg",
+      "url": "https://www.microsoft.com/en-ca/microsoft-365/access"
+    },
+    {
       "name": "Angular",
       "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/angular.svg",
       "url": "https://angular.io/"
@@ -136,6 +141,11 @@
       "name": "Unreal",
       "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/unreal.svg",
       "url": "https://www.unrealengine.com"
+    },
+    {
+      "name": "VBA",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/vba.svg",
+      "url": "https://docs.microsoft.com/en-us/office/vba/api/overview/"
     }
   ]
 }
