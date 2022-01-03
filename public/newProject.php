@@ -52,14 +52,13 @@ if (isset($_SESSION['id']) && $_SESSION['id'] == $authorized_github_id) {
 
     print_r($newProject);
 
-    $projects[] = $newProject;
-    $projectsLength = count($projects);
+    # add the new project to the top of the array
+    array_unshift($projects, $newProject);
 
     $projects = json_encode($projects, JSON_PRETTY_PRINT);
     print_r(file_put_contents("data/projects.json", $projects));
 
-    # redirect to the projects page
-    echo "Project Added Successfully: https://www.ahmadz.ai/#projects";
+   header("Location: /#projects&success");
 
 } else {
     unset($_COOKIE['PHPSESSID']);
