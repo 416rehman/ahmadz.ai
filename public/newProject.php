@@ -1,7 +1,8 @@
 <?php
 session_start();
+include 'auth/variables.php';
 
-if (isset($_SESSION['id']) && $_SESSION['id'] == 15690606) {
+if (isset($_SESSION['id']) && $_SESSION['id'] == $authorized_github_id) {
     # read all the data from the form
     $project_title = $_POST['title'];
     $project_label = $_POST['label'];
