@@ -1,11 +1,16 @@
 :root {
     --nav-color: #787878;
     --nav-color-active: #f1f1f1;
+    --primary-color: #414141;
 }
 a:visited { text-decoration: none; color:var(--nav-color)}
+a:hover {
+    cursor: pointer;
+}
 nav {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     background-color: #000000;
     align-items: center;
     justify-content: space-between;
@@ -33,20 +38,21 @@ nav #links div {
     color: var(--nav-color);
 }
 #links div:hover {color: var(--nav-color-active);}
-#blog {
-    color: black;
-    background-color: var(--nav-color);
+.primary {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    background-color: var(--primary-color);
     height: 50px;
     min-width: 100px;
-    display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
     padding: 0 10px 0 10px;
 }
-#blog:hover {
-    background-color: var(--nav-color-active);
-    color: black;
+.primary:hover, .primary:hover * {
+    background-color: #3d3d3d;
+    color: #ffffff;
 }
 
 #blog > img {

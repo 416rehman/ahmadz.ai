@@ -1,5 +1,5 @@
 import {tools} from './allTools.json'
-const darkIcons = ['express', 'handlebars']
+
 export function randomRGB(min= 0, max = 255) {
     const r = getRandomInt(min, max);
     const g = getRandomInt(min, max);
@@ -8,6 +8,10 @@ export function randomRGB(min= 0, max = 255) {
 }
 export function getRandomInt(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+export function getAllTools(){
+    return tools
 }
 
 export function getTool(name, height=30) {
@@ -20,6 +24,13 @@ export function getTool(name, height=30) {
     }
     return <a href={tool.url}><img src={tool.imageURL} style={style} alt={name + '\'s logo'}/></a>
 }
+export function convertDate (date){
+    let newDate = new Date(date);
+    let month = newDate.getMonth();
+    let day = newDate.getDate();
+    let year = newDate.getFullYear();
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    return `${day} ${months[month]} ${year}`;
+}
 
-const functions = {randomRGB, getRandomInt}
-export default functions
+export default {randomRGB, getRandomInt, convertDate}

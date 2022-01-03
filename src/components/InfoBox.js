@@ -6,12 +6,12 @@ export default function InfoBox(props) {
         flexWrap: 'nowrap',
         flexDirection: 'column',
         maxWidth: `${props.width || '350px'}`,
-        border: 'solid 1px #8a8a8a'
+        border: 'solid 1px var(--border-color)'
     }
     const titleStyles = {
         padding: '5px',
         fontSize: 30,
-        borderBottom: 'solid 1px #8a8a8a',
+        borderBottom: 'solid 1px var(--border-color)',
         paddingTop: props.label ? 0 : '5px',
         fontWeight: '600'
     }

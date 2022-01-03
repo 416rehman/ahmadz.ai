@@ -27,7 +27,7 @@ if (isset($_SESSION['id']) && $_SESSION['id'] == 15690606) {
 # if empty fields are found, return the names of the empty fields
     if (count($emptyFields) > 0) {
         echo json_encode($emptyFields);
-        header("Location: 'https://www.ahmadz.ai/");
+        header("Location: /");
         exit();
     }
 

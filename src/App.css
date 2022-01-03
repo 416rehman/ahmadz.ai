@@ -27,6 +27,32 @@ html {
   background: black url("background.png") no-repeat fixed;
 }
 
+button {
+  display: inline-flex;
+  border: solid 1px var(--border-color);
+  padding: 2px 15px 2px 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  font-weight: 600;
+}
+button * {
+  color: #b4b4b4;
+}
+button > svg {
+  padding-left: 15px;
+}
+
+button:hover {
+  background-color: #ffffff !important;
+  cursor: pointer;
+  color: black;
+}
+
+button:hover * {
+  color: #000000 !important;
+}
+
 /*Italic Placeholders*/
 ::-webkit-input-placeholder { font-style: italic; }
 :-moz-placeholder { font-style: italic; }

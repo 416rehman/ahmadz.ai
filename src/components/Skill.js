@@ -4,14 +4,14 @@ export default function Skill(props){
     const tool = getTool(props.text, 20)
     const SkillStyles = {
         margin: '5px 0 5px 0',
-        border: 'solid 1px #C4C4C4',
+        border: 'solid 1px var(--border-color)',
         display: 'inline-flex',
         textAlign: 'right',
         maxWidth: '100%'
     }
     const textStyle = {
         padding: '5px',
-        borderLeft: 'solid 1px #C4C4C4',
+        borderLeft: 'solid 1px var(--border-color)',
         fontWeight: '400',
         display: 'flex',
         alignItems: 'center'

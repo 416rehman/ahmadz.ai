@@ -1,11 +1,11 @@
 <?php
 session_start();
-
+include 'variables.php';
 # send a post request to get the access token
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "https://github.com/login/oauth/access_token");
 curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, "client_id=Iv1.8092fe843b5138e7&client_secret=47f9905c3395fde64337923a1adfbeaf4417f9a1&code=" . $_GET['code']);
+curl_setopt($ch, CURLOPT_POSTFIELDS, "client_id=". $client_id ."&client_secret=" . $client_secret . "&code=" . $_GET['code']);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/xml'));
 $result = curl_exec($ch);
@@ -29,7 +29,7 @@ $username = $json['login'];
 $id = $json['id'];
 
 # if the user id is the same as 15690606 then create a session and redirect to the index page
-if ($id == 15690606) {
+if ($id == $authorized_github_id) {
     $_SESSION['id'] = $id;
 } else {
     unset($_COOKIE['PHPSESSID']);
@@ -39,4 +39,4 @@ if ($id == 15690606) {
     exit();
 }
 
-header("Location: https://www.ahmadz.ai/");
+header("Location: /");

@@ -1,8 +1,8 @@
 :root {
-    --border-color: #787878;
+    --border-color: #3d3d3d;
 }
 .Project {
-    border: solid 1px #C4C4C4;
+    border: solid 1px var(--border-color);
     display: inline-flex;
     flex-direction: column;
     width: 500px;

@@ -13,7 +13,7 @@ export default function ProgressBar(props) {
     }
     const containerStyles = {
         height: 15,
-        border: '1px solid #C4C4C4',
+        border: '1px solid var(--border-color)',
         width: props.width || `150px`,
         maxWidth: '100%',
         marginRight: '10px'

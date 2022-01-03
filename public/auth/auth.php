@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-$status = isset($_SESSION['id']) && $_SESSION['id'] == 15690606;
+include 'variables.php';
+
+$status = isset($_SESSION['id']) && $_SESSION['id'] == $authorized_github_id;
 if (!$status) {
     unset($_COOKIE['PHPSESSID']);
     setcookie('PHPSESSID', '', time() - 3600, '/');

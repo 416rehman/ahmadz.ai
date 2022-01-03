@@ -2,9 +2,9 @@ import './Project.css'
 import {randomRGB} from '../../helpers.js'
 import {getTool} from "../../helpers.js";
 import {FiGithub} from 'react-icons/fi'
-import {GrHeroku} from 'react-icons/gr'
 import {FiMoreHorizontal} from 'react-icons/fi'
-export default function Project(props){
+import {CgArrowsExpandUpRight} from "react-icons/all";
+export default function NewProject(props){
     const overlayColor = randomRGB()
     const infoStyle = {
         backgroundImage: `url("${props.image || 'https://picsum.photos/800/500?grayscale'}")`,
@@ -34,10 +34,10 @@ export default function Project(props){
                 </div>
             </div>
 
-            {props.github || props.heroku || props.more ?
+            {props.github || props.demo || props.more ?
             <div id={"links"}>
                 {props.github ? <a id={"github"} href={props.github}><div><pre>Github  </pre><FiGithub/></div></a> : ''}
-                {props.heroku ? <a id={"heroku"} href={props.heroku}><div><pre>Heroku  </pre><GrHeroku/></div></a> : ''}
+                {props.demo ? <a id={"demo"} href={props.demo} target={"_blank"}><div><pre>Demo  </pre><CgArrowsExpandUpRight/></div></a> : ''}
                 {props.more ? <a id={"more"} href={props.more}><div><pre>More  </pre><FiMoreHorizontal/></div></a> : ''}
             </div> : ''}
 
