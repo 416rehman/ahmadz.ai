@@ -9,6 +9,7 @@ import {RiNewspaperLine} from "react-icons/ri";
 import Contact from '../../components/Suggestions/Contact.js'
 import {useEffect, useState} from "react";
 import Posts from "../../components/Posts/Posts";
+import Toggle from '../../components/Toggle/Toggle'
 
 
 export default function Home() {
@@ -16,6 +17,8 @@ export default function Home() {
     const [skills, setSkills] = useState([])
     const [knowledge, setKnowledge] = useState([])
     const [projects, setProjects] = useState([])
+    const [projectFilters, setProjectFilters] = useState([])
+    const [activeProjectFilters, setActiveProjectFilters] = useState(new Set())
 
     useEffect(() => {
         fetch("data/about.json").then(res => res.json().then(r => {
@@ -32,13 +35,49 @@ export default function Home() {
             })))
         })
         fetch("data/projects.json").then(res => {
-            res.json().then(s => setProjects(s.map(p => {
-                return <Project madeWith={p.madeWith} label={p.label} image={p.image} title={p.title}
-                                description={p.description} github={p.links.github} demo={p.links.demo}
-                                more={p.links.more}/>
-            })))
+            res.json().then(s => {
+                let projectFiltersSet = new Set()
+                s.forEach(p => p.madeWith.forEach(m => projectFiltersSet.add(m)))
+
+                let projects;
+                if (activeProjectFilters.size === 0) {
+                    projects = s.map(p => {
+                        return <Project madeWith={p.madeWith} label={p.label} image={p.image} title={p.title}
+                                        description={p.description} github={p.links.github} demo={p.links.demo}
+                                        more={p.links.more}/>
+                    })
+                } else {
+                    projects = s.filter(p => p.madeWith.some(m => activeProjectFilters.has(m))).map(p => {
+                        return <Project madeWith={p.madeWith} label={p.label} image={p.image} title={p.title}
+                                        description={p.description} github={p.links.github} demo={p.links.demo}
+                                        more={p.links.more}/>
+                    })
+                }
+                setProjects(projects)
+
+                const projectFilterElements = Array.from(projectFiltersSet).map(p => {
+                    return <label htmlFor={p}>
+                        {p}
+                        <Toggle id={p} name={"projectFilters[]"} value={p} onChange={setFilter}/>
+                    </label>
+                })
+                setProjectFilters([...projectFilterElements])
+            })
         })
-    }, [])
+    }, [activeProjectFilters])
+
+    function setFilter(event) {
+        if (event.target.checked) {
+            setActiveProjectFilters(new Set([...activeProjectFilters, event.target.value]))
+        } else {
+            setActiveProjectFilters(new Set(Array.from(activeProjectFilters).filter(f => f !== event.target.value)))
+        }
+    }
+
+    function resetFilters() {
+        setActiveProjectFilters(new Set())
+        document.querySelectorAll("#filter input[type=checkbox]").forEach(f => f.checked = false)
+    }
 
     return about && skills && knowledge && projects ? (
         <div id="About">
@@ -95,7 +134,10 @@ export default function Home() {
             </div>
             <hr/>
             <div id={'portfolio'}>
-                <h1>Projects</h1>
+                <h1>Projects {activeProjectFilters.size > 0 ? <button onClick={resetFilters}>Clear Filter</button> : null}</h1>
+                <div id={'filter'}>
+                    {projectFilters}
+                </div>
                 <div id={'projects'}>
                     {projects}
                 </div>

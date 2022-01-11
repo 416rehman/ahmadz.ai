@@ -21,7 +21,6 @@ html {
 
 #page {
   margin-top: 50px;
-  position: absolute;
   min-height: calc(100vh - 50px); /*50px = size of the navbar*/
   min-width: 100%;
   background: black url("background.png") no-repeat fixed;
