@@ -26,7 +26,7 @@ export default function Home() {
         }))
         fetch("data/skills.json").then(res => {
             res.json().then(s => setSkills(s.skills.map(s => {
-                return <div><Skill percentage={s.percentage} text={`${s.name}`} width={`400px`}/></div>
+                return <div><Skill percentage={s.percentage} text={`${s.name}`} width={`350px`}/></div>
             })))
         })
         fetch("data/knowledge.json").then(res => {
@@ -37,7 +37,7 @@ export default function Home() {
         fetch("data/projects.json").then(res => {
             res.json().then(s => {
                 let projectFiltersSet = new Set()
-                s.forEach(p => p.madeWith.forEach(m => projectFiltersSet.add(m)))
+                s.forEach(p => p.madeWith.forEach(m => projectFiltersSet.add(m.toLowerCase())))
 
                 let projects;
                 if (activeProjectFilters.size === 0) {
@@ -47,7 +47,7 @@ export default function Home() {
                                         more={p.links.more}/>
                     })
                 } else {
-                    projects = s.filter(p => p.madeWith.some(m => activeProjectFilters.has(m))).map(p => {
+                    projects = s.filter(p => p.madeWith.some(m => activeProjectFilters.has(m.toLowerCase()))).map(p => {
                         return <Project madeWith={p.madeWith} label={p.label} image={p.image} title={p.title}
                                         description={p.description} github={p.links.github} demo={p.links.demo}
                                         more={p.links.more}/>
@@ -83,11 +83,13 @@ export default function Home() {
         <div id="About">
             <div className={"about-container"}>
                 <div>
-                    <p id="iam">👋 Hi, I am</p>
-                    <h1 id="title">{about.name || 'Rehman Ahmadzai'}</h1>
-                    <p id="bio"
-                       style={{color: '#A1A1A1'}}>{about.bio || 'I am a programmer, I like to work on games and full-stack applications.'}</p>
-                    <pre id={"socials"}>
+                    <div className={'info-container'}>
+                      <div>
+                          <p id="iam">👋 Hi, I am</p>
+                          <h1 id="title">{about.name || 'Rehman Ahmadzai'}</h1>
+                          <p id="bio"
+                             style={{color: '#A1A1A1'}}>{about.bio || 'I am a programmer, I like to work on games and full-stack applications.'}</p>
+                          <pre id={"socials"}>
                         <a href={about.linkedInURL || "https://www.linkedin.com/in/rehmanahmadzai/"}>
                             <button value={"LinkedIn"}>
                         LinkedIn <AiFillLinkedin size={30}/>
@@ -110,19 +112,21 @@ export default function Home() {
                     </a>
 
                 </pre>
+                      </div>
+                        {about.pictureURL ? <img className={'picture'} src={about.pictureURL} alt={about.name + 's Picture'}/> : null}
+                    </div>
                 </div>
-                <Posts/>
+
             </div>
-
-
             <br/>
             <br/>
             <br/>
-            <div>
-                <h2>Programming Languages</h2>
+            <h2>Programming Languages</h2>
+            <div id={'section-2'}>
                 <div id={`languages`}>
                     {skills}
                 </div>
+                <Posts/>
             </div>
             <br/>
 

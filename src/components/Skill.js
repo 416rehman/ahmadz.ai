@@ -1,7 +1,7 @@
 import ProgressBar from "./ProgressBar";
 import {getTool} from "../helpers";
 export default function Skill(props){
-    const tool = getTool(props.text, 20)
+    const tool = getTool(props.text)
     const SkillStyles = {
         margin: '5px 0 5px 0',
         border: 'solid 1px var(--border-color)',
@@ -16,10 +16,27 @@ export default function Skill(props){
         display: 'flex',
         alignItems: 'center'
     }
+    let toolStyle = {
+        paddingLeft: '5px',
+        height: `20px`,
+        filter: tool?.dark ? 'invert(1)' : 'initial'
+    }
     return(
         <div className={`Skill`} style={SkillStyles}>
             <ProgressBar completed={props.percentage} width={props.width}/>
-            <div style={textStyle}>{props.text}{tool}</div>
+
+            {tool
+                ?<a href={tool.url}>
+                    <div style={textStyle}>
+                        {props.text}
+                        <img src={tool.imageURL} style={toolStyle} alt={tool?.name + '\'s logo'}/>
+                    </div>
+                </a>
+                :<div style={textStyle}>
+                    {props.text}
+                </div>
+            }
+
         </div>
     )
 }

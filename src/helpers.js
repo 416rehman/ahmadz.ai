@@ -14,7 +14,7 @@ export function getAllTools(){
     return tools
 }
 
-export function getTool(name, height=30) {
+export function getToolElement(name, height=30) {
     const tool = tools.find(t=>t.name.toLowerCase() === name.toLowerCase())
     if (!tool) return
     let style = {
@@ -24,6 +24,11 @@ export function getTool(name, height=30) {
     }
     return <a href={tool.url}><img src={tool.imageURL} style={style} alt={name + '\'s logo'}/></a>
 }
+
+export function getTool(name) {
+    return tools.find(t => t.name.toLowerCase() === name.toLowerCase())
+}
+
 export function convertDate (date){
     let newDate = new Date(date);
     let month = newDate.getMonth();

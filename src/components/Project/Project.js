@@ -1,6 +1,6 @@
 import './Project.css'
 import {randomRGB} from '../../helpers.js'
-import {getTool} from "../../helpers.js";
+import {getToolElement} from "../../helpers.js";
 import {FiGithub} from 'react-icons/fi'
 import {FiMoreHorizontal} from 'react-icons/fi'
 import {CgArrowsExpandUpRight} from "react-icons/all";
@@ -15,7 +15,7 @@ export default function NewProject(props){
     }
 
     const tools = props.madeWith ? props.madeWith.map(t=>{
-        return getTool(t)
+        return getToolElement(t)
     }) : null;
     return(
         <div className={'Project'}>
