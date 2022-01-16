@@ -20,3 +20,5 @@ services:
   php:
     image: php:7-fpm
     restart: always
+    volumes:
+      - web_data:/usr/share/nginx/html
