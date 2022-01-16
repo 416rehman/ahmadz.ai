@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: prod.Dockerfile
     ports:
-      - "80:80"
+      - "8001:80"
     links:
       - php
   php:
