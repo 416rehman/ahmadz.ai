@@ -2,8 +2,8 @@ version: "3.9"
 services:
   web:
     build:
-      context: .
-      dockerfile: prod.Dockerfile
+      context: ..
+      dockerfile: docker/prod.Dockerfile
     ports:
       - "8001:80"
     links:
