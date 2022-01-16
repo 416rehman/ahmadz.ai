@@ -41,7 +41,7 @@ export default function Navbar() {
             {
                 isLoggedIn ?
                     [
-                        <a href="/auth/logout.php">
+                        <a href="/php/logout.php">
                             <div id="logout" className={'primary'}>Logout</div>
                         </a>,
                         <a id="new" className={'primary'} onClick={()=>setShowModal(true)}>New Project</a>,
@@ -49,7 +49,7 @@ export default function Navbar() {
                     ]
                     :
                     [
-                        <a href="/auth/login.php">
+                        <a href="/php/login.php">
                         <div id="login" className={'primary'}>Login</div>
                         </a>
                     ]
