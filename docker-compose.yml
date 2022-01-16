@@ -2,11 +2,12 @@ version: "3.9"
 services:
   web:
     build:
-      context: ..
+      context: .
       dockerfile: docker/prod.Dockerfile
     ports:
       - "8001:80"
     links:
       - php
+    restart: always
   php:
     image: php:7-fpm
