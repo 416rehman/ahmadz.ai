@@ -9,6 +9,8 @@ services:
     links:
       - php
     restart: always
+    depends_on:
+      - php
   php:
     image: php:7-fpm
     restart: always
