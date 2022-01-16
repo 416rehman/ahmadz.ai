@@ -13,28 +13,32 @@
       "percentage": "70"
     },
     {
+      "name": "Rust",
+      "percentage": "70"
+    },
+    {
       "name": "Java",
-      "percentage": "80"
+      "percentage": "70"
     },
     {
       "name": "Javascript",
-      "percentage": "95"
+      "percentage": "85"
     },
     {
       "name": "TypeScript",
-      "percentage": "90"
+      "percentage": "80"
     },
     {
       "name": "GoLang",
-      "percentage": "75"
+      "percentage": "60"
     },
     {
       "name": "Python",
-      "percentage": "80"
+      "percentage": "75"
     },
     {
       "name": "SQL",
-      "percentage": "80"
+      "percentage": "70"
     }
   ]
 }

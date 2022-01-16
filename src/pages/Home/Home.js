@@ -87,9 +87,12 @@ export default function Home() {
                       <div>
                           <p id="iam">👋 Hi, I am</p>
                           <h1 id="title">{about.name || 'Rehman Ahmadzai'}</h1>
-                          <p id="bio"
-                             style={{color: '#A1A1A1'}}>{about.bio || 'I am a programmer, I like to work on games and full-stack applications.'}</p>
-                          <pre id={"socials"}>
+                      </div>
+                        {about.pictureURL ? <img className={'picture'} src={about.pictureURL} alt={about.name + 's Picture'}/> : null}
+                    </div>
+                    <p id="bio"
+                       style={{color: '#A1A1A1'}}>{about.bio || 'I am a programmer, I like to work on games and full-stack applications.'}</p>
+                    <pre id={"socials"}>
                         <a href={about.linkedInURL || "https://www.linkedin.com/in/rehmanahmadzai/"}>
                             <button value={"LinkedIn"}>
                         LinkedIn <AiFillLinkedin size={30}/>
@@ -112,9 +115,6 @@ export default function Home() {
                     </a>
 
                 </pre>
-                      </div>
-                        {about.pictureURL ? <img className={'picture'} src={about.pictureURL} alt={about.name + 's Picture'}/> : null}
-                    </div>
                 </div>
 
             </div>

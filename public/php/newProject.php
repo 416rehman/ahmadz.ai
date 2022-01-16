@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'auth/variables.php';
+include 'variables.php';
 
 if (isset($_SESSION['id']) && $_SESSION['id'] == $authorized_github_id) {
     # read all the data from the form

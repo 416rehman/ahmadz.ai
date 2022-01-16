@@ -7,10 +7,7 @@ import React from "react";
 export default function NewProject (props) {
     const [userLoggedIn, setUserLoggedIn] = React.useState(true);
     function checkAuth() {
-
-        console.log("Checking auth");
-    //send a get request to /auth/auth.php and check if the value is true
-        fetch('https://ahmadz.ai/auth/auth.php', {
+        fetch('/php/auth.php', {
             method: 'GET'
         })
             .then(res => res.json())
@@ -58,11 +55,11 @@ export default function NewProject (props) {
             <div style={{
                 padding: "1rem",
             }}>
-                <form action="/newProject.php" style={{
+                <form action="/php/newProject.php" style={{
                     display: "flex",
                     flexDirection: "column",
                     gap: "1rem",
-                }} method={'post'} onSubmit={checkAuth()}>
+                }} method={'post'} onSubmit={checkAuth}>
 
                     <label htmlFor="prjtitle">
                         Title
