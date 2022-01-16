@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  web:
+    build:
+      dockerfile: prod.Dockerfile
+    ports:
+      - "80:80"
+    links:
+      - php
+  php:
+    image: php:7-fpm
