@@ -11,3 +11,4 @@ services:
     restart: always
   php:
     image: php:7-fpm
+    restart: always
