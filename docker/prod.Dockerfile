@@ -2,12 +2,14 @@
 FROM node:lts-alpine3.14 as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
-COPY package.json package-lock.json ./
-# install from package-lock.json
-RUN npm ci --silent
-RUN npm install react-scripts@4.0.3 -g --silent
+
+# install from package.json
+COPY ../package.json package-lock.json ./
+RUN npm install
+
 # copy everything from the build environment to the workdir
-COPY . ./
+COPY .. ./
+
 # run the build
 RUN npm run build
 

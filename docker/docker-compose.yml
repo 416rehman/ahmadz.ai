@@ -3,7 +3,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: prod.Dockerfile
+      dockerfile: docker-compose.yml
     ports:
       - "8001:80"
     links:
