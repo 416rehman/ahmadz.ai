@@ -50,13 +50,11 @@ if (isset($_SESSION['id']) && $_SESSION['id'] == $authorized_github_id) {
         )
     );
 
-    print_r($newProject);
-
     # add the new project to the top of the array
     array_unshift($projects, $newProject);
 
     $projects = json_encode($projects, JSON_PRETTY_PRINT);
-    print_r(file_put_contents("../data/projects.json", $projects));
+    file_put_contents("../data/projects.json", $projects);
 
    header("Location: /#projects&success");
 
