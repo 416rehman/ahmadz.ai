@@ -39,7 +39,8 @@
       "sqlite",
       "apache",
       "nginx",
-      "elasticsearch"
+      "elasticsearch",
+      "docker"
     ],
     "image": "https:\/\/i.imgur.com\/HFiua2j.png",
     "links": {
@@ -89,7 +90,8 @@
       "github",
       "nodejs",
       "nginx",
-      "oauth"
+      "oauth",
+      "docker" 
     ],
     "image": "https:\/\/i.imgur.com\/luKmB1i.png",
     "links": {
