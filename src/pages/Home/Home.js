@@ -26,7 +26,7 @@ export default function Home() {
         }))
         fetch("data/skills.json").then(res => {
             res.json().then(s => setSkills(s.skills.map(s => {
-                return <div><Skill percentage={s.percentage} showPercentage={false} text={`${s.name}`} width={`350px`}/></div>
+                return <div><Skill percentage={s.percentage} text={`${s.name}`} width={`350px`}/></div>
             })))
         })
         fetch("data/knowledge.json").then(res => {
