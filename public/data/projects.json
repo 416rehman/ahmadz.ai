@@ -1,19 +1,5 @@
 [
     {
-        "title": "Retro Flappy",
-        "label": "Game Dev",
-        "description": "Created with bracket_lib in Rust, Retro Flappy is a ascii-based clone of Flappy Birds.",
-        "image": "https:\/\/i.imgur.com\/9HjOWZp.png",
-        "madeWith": [
-            "Rust"
-        ],
-        "links": {
-            "github": "https:\/\/github.com\/416rehman\/Retro-Flappy",
-            "demo": "https:\/\/github.com\/416rehman\/Retro-Flappy\/releases\/tag\/1.0",
-            "more": ""
-        }
-    },
-    {
         "title": "UI \/ Graphic Designs",
         "label": "Design",
         "description": "A compilation of my UI related graphics I designed for my projects on Behance.net",
