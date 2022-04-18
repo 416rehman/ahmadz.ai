@@ -85,8 +85,8 @@
     },
     {
       "name": "HDL",
-      "imageURL": "https://www.nand2tetris.org/software#:~:text=About%20the%20Software,projects%2C%20and%C2%A0tools.",
-      "url": "https://drive.google.com/file/d/1xZzcMIUETv3u3sdpM_oTJSTetpVee3KZ/view/"
+      "imageURL": "https://raw.githubusercontent.com/416rehman/416rehman/main/icons/hdl.ico",
+      "url": "https://www.nand2tetris.org/software#:~:text=About%20the%20Software,projects%2C%20and%C2%A0tools."
     },
     {
       "name": "Java",
