@@ -99,6 +99,11 @@
       "url": "https://ubuntu.com/"
     },
     {
+      "name": "Material UI",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/mui.svg",
+      "url": "https://mui.com/"
+    },
+    {
       "name": "MongoDB",
       "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/mongodb.svg",
       "url": "https://www.mongodb.com/"
@@ -149,10 +154,15 @@
       "url": "https://reactjs.org"
     },
     {
+      "name": "React Router",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/react-router.svg",
+      "url": "https://reactrouter.com/"
+    },
+    {
       "name": "Rust",
       "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/rust.svg",
       "url": "https://www.rust-lang.org/",
-	"dark": "true"
+      "dark": "true"
     },
     {
       "name": "SDL",
@@ -163,6 +173,11 @@
       "name": "SQLite",
       "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/sqlite.svg",
       "url": "https://www.sqlite.org/"
+    },
+    {
+      "name": "Swagger",
+      "imageURL": "https://raw.githubusercontent.com/certifiedrehman/certifiedrehman/main/icons/swagger.svg",
+      "url": "https://swagger.io/"
     },
     {
       "name": "TypeScript",

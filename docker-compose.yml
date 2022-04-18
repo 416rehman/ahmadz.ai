@@ -22,3 +22,6 @@ services:
     restart: always
     volumes:
       - ./build:/usr/share/nginx/html
+    user: root
+    command:
+      - sudo chmod 777 -R /usr/share/nginx/html/data
