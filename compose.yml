@@ -1,27 +1,21 @@
-version: "3.9"
-
-volumes:
-  web_data:
-
+version: '3.3'
 services:
-  web:
-    build:
-      context: .
-      dockerfile: docker/prod.Dockerfile
-    ports:
-      - "8001:80"
-    links:
-      - php
-    restart: always
-    depends_on:
-      - php
-    volumes:
-      - ./build:/usr/share/nginx/html
-  php:
-    image: php:7-fpm
-    restart: always
-    volumes:
-      - ./build:/usr/share/nginx/html
-    user: root
-    command:
-      - sudo chmod 777 -R /usr/share/nginx/html/data
+    php-nginx:
+            #        ports:
+            #            - '80:8080'
+        volumes:
+            - '~/apps/ahmadz.ai/build:/var/www/html'
+        image: trafex/php-nginx
+        labels:
+          - "traefik.enable=true"
+          - "traefik.http.routers.portfolio.rule=Host(`portfolio.ahmadz.ai`, `ahmadz.ai`, `www.ahmadz.ai`)"
+          - "traefik.http.routers.portfolio.entrypoints=websecure"
+          - "traefik.http.services.portfolio.loadbalancer.server.port=8080"
+          - "traefik.http.routers.portfolio.service=portfolio"
+          - "traefik.http.routers.portfolio.tls.certresolver=leresolver"
+        networks:
+          - traefik_net
+
+networks:
+    traefik_net:
+        external: true
