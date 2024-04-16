@@ -21,20 +21,20 @@ export default function Home() {
     const [activeProjectFilters, setActiveProjectFilters] = useState(new Set())
 
     useEffect(() => {
-        fetch(process.env.REACT_APP_ABOUT_PATH).then(res => res.json().then(r => {
+        fetch(`https://raw.githubusercontent.com/${process.env.REACT_APP_DATA_GITHUB}/master/data/about.json`).then(res => res.json().then(r => {
             setAbout(r)
         }))
-        fetch(process.env.REACT_APP_SKILLS_PATH).then(res => {
+        fetch(`https://raw.githubusercontent.com/${process.env.REACT_APP_DATA_GITHUB}/master/data/skills.json` ).then(res => {
             res.json().then(s => setSkills(s.skills.map(s => {
                 return <div><Skill percentage={s.percentage} text={`${s.name}`} width={`350px`}/></div>
             })))
         })
-        fetch(process.env.REACT_APP_KNOWLEDGE_PATH).then(res => {
+        fetch(`https://raw.githubusercontent.com/${process.env.REACT_APP_DATA_GITHUB}/master/data/knowledge.json`).then(res => {
             res.json().then(s => setKnowledge(s.knowledge.map(k => {
                 return <InfoBox label={k.label} title={k.title} text={k.text} width={`750px`}/>
             })))
         })
-        fetch(process.env.REACT_APP_PROJECTS_PATH).then(res => {
+        fetch(`https://raw.githubusercontent.com/${process.env.REACT_APP_DATA_GITHUB}/master/data/projects.json`).then(res => {
             res.json().then(s => {
                 let projectFiltersSet = new Set()
                 s.forEach(p => p.madeWith.forEach(m => projectFiltersSet.add(m.toLowerCase())))
@@ -58,7 +58,7 @@ export default function Home() {
                 const projectFilterElements = Array.from(projectFiltersSet).map(p => {
                     return <label htmlFor={p}>
                         {p}
-                        <Toggle id={p} name={"projectFilters[]"} value={p} onChange={setFilter}/>
+                        <Toggle id={p} name={"projectFilters[]"} value={p} onChange={setFilter} label={"filters"}/>
                     </label>
                 })
                 setProjectFilters([...projectFilterElements])
