@@ -1,4 +1,4 @@
-import {tools} from './allTools.json'
+import allTools from './allTools.json'
 
 export function randomRGB(min= 0, max = 255) {
     const r = getRandomInt(min, max);
@@ -10,12 +10,8 @@ export function getRandomInt(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export function getAllTools(){
-    return tools
-}
-
 export function getToolElement(name, height=30) {
-    const tool = tools.find(t=>t.name.toLowerCase() === name.toLowerCase())
+    const tool = allTools.tools.find(t=>t.name.toLowerCase() === name.toLowerCase())
     if (!tool) return
     let style = {
         paddingLeft: '5px',
@@ -26,7 +22,7 @@ export function getToolElement(name, height=30) {
 }
 
 export function getTool(name) {
-    return tools.find(t => t.name.toLowerCase() === name.toLowerCase())
+    return allTools.tools.find(t => t.name.toLowerCase() === name.toLowerCase())
 }
 
 export function convertDate (date){
@@ -37,5 +33,3 @@ export function convertDate (date){
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     return `${day} ${months[month]} ${year}`;
 }
-
-export default {randomRGB, getRandomInt, convertDate}

@@ -3,8 +3,9 @@ import {randomRGB} from '../../helpers.js'
 import {getToolElement} from "../../helpers.js";
 import {FiGithub} from 'react-icons/fi'
 import {FiMoreHorizontal} from 'react-icons/fi'
-import {CgArrowsExpandUpRight} from "react-icons/all";
-export default function NewProject(props){
+import {CgArrowsExpandUpRight} from "react-icons/cg";
+
+export default function ProjectCard(props){
     const overlayColor = randomRGB()
     const infoStyle = {
         backgroundImage: `url("${props.image || 'https://picsum.photos/800/500?grayscale'}")`,

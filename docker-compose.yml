@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: ahmadz_ai_web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    networks:
+      - npm-network
+
+networks:
+  npm-network:
+    external: true

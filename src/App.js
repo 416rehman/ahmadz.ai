@@ -1,4 +1,4 @@
-import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
+import {Route, BrowserRouter as Router, Routes} from "react-router-dom";
 import './App.css';
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home/Home";
@@ -12,10 +12,10 @@ class App extends Component {
                 <div className="App">
                     <Navbar/>
                     <div id="page">
-                        <Switch>
-                            <Route path="/" exact component={Home}/>
-                            <Route component={Error404}/>
-                        </Switch>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="*" element={<Error404 />} />
+                        </Routes>
                     </div>
                 </div>
             </Router>
