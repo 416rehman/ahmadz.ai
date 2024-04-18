@@ -16,9 +16,9 @@
       "nginx"
     ],
     "links": {
-      "github": "https://i.imgur.com/EQQt5HP.png",
-      "demo": "",
-      "more": ""
+      "github": "https://contractrpro.ahmadz.ai/",
+      "demo": "https://contractrpro.ahmadz.ai/",
+      "more": "https://www.figma.com/file/qX72J11MT6G4RyHy52FWg0/ContractorPro?type=design&mode=design&t=0Z4TpjSG9oNGGMCE-0"
     }
   },
   {
@@ -33,7 +33,22 @@
       "Unreal"
     ],
     "links": {
-      "github": "https://i.imgur.com/EQQt5HP.png",
+      "github": "https://github.com/416rehman/UnrealGPT",
+      "demo": "",
+      "more": ""
+    }
+  },
+  {
+    "title": "Status Monitor",
+    "label": "DevOps",
+    "description": "Real-time global status monitoring page providing instant updates on the health and status of ALL self-hosted systems and services, offering crucial insights into current conditions and planned outages.",
+    "image": "https://i.imgur.com/vsBR9zl.png",
+    "madeWith": [
+      "Docker",
+      "nginx"
+    ],
+    "links": {
+      "github": "https://status.ahmadz.ai",
       "demo": "",
       "more": ""
     }
