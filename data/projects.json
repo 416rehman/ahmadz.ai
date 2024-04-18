@@ -1,5 +1,27 @@
 [
   {
+    "title": "ContractrPro",
+    "label": "Cloud based Full-Stack SaaS App",
+    "description": "A centralized platform to manage contracts and expenses, assign resources and track progress in real-time, making it easy to forecast revenue and expenses, track progress on individual contract-jobs, and manage resources.",
+    "image": "https://i.imgur.com/OCYBOL1.png",
+    "madeWith": [
+      "Typescript",
+      "React",
+      "figma",
+      "Javascript",
+      "Postgresql",
+      "docker",
+      "express",
+      "postman",
+      "nginx",
+    ],
+    "links": {
+      "github": "https://i.imgur.com/EQQt5HP.png",
+      "demo": "",
+      "more": ""
+    }
+  },
+  {
     "title": "Unreal GPT",
     "label": "AI Machine Learning",
     "description": "1700+ pages of Unreal Engine documentation augmented and served through FAISS + OpenAI with LangChain.",
@@ -11,7 +33,7 @@
       "Unreal"
     ],
     "links": {
-      "github": "https://github.com/416rehman/UnrealGPT",
+      "github": "https://i.imgur.com/EQQt5HP.png",
       "demo": "",
       "more": ""
     }
