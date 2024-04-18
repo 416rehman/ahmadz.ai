@@ -25,7 +25,7 @@
     "title": "Unreal GPT",
     "label": "AI Machine Learning",
     "description": "1700+ pages of Unreal Engine documentation augmented and served through FAISS + OpenAI with LangChain.",
-    "image": "https://i.imgur.com/yAMKZZn.png",
+    "image": "https://i.imgur.com/EQQt5HP.png",
     "madeWith": [
       "FAISS",
       "LangChain",
