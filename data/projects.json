@@ -1,5 +1,22 @@
 [
   {
+    "title": "Unreal GPT",
+    "label": "AI Machine Learning",
+    "description": "1700+ pages of Unreal Engine documentation augmented and served through FAISS + OpenAI with LangChain.",
+    "image": "https://i.imgur.com/yAMKZZn.png",
+    "madeWith": [
+      "FAISS",
+      "LangChain",
+      "Python",
+      "Unreal"
+    ],
+    "links": {
+      "github": "https://github.com/416rehman/UnrealGPT",
+      "demo": "",
+      "more": ""
+    }
+  },
+  {
     "title": "32-bit Chipset Hardware Design",
     "label": "HDL (Hardware Description Language)",
     "description": "Design of various logic gates constructed from NAND gates. Circuit design drawn using falstad circuit simulator. Implemented using HDL and tested using hardware simulator, both provided by nand2tetris.",
