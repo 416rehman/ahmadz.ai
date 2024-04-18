@@ -1,41 +1,32 @@
-# syntax=docker/dockerfile:1
+# Use the Node.js image as a base image
+FROM node:20-alpine as builder
 
-FROM node:20-alpine AS build
-
+# Set the working directory
 WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json separately to leverage caching
-COPY package.json .
-COPY package-lock.json .
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Check if .env file exists
+RUN test -f .env || (echo "Error: .env file not found" && false)
 
 # Install dependencies
 RUN npm ci --omit=dev
 
-# Copy the rest of the source files into the image.
+# Copy the rest of the source code
 COPY . .
-
-# Check if .env file exists, raise error if not found
-RUN test -f .env || (echo "ERROR: .env file not found" && exit 1)
-
-# Copy the .env file into the image
-COPY .env .env
 
 # Build the React code
 RUN npm run build
 
-# Stage 2 - Serve the built React code
-FROM node:20-alpine
+# Use Nginx as a lightweight web server to serve the React application
+FROM nginx:alpine
 
-WORKDIR /usr/src/app
+# Copy the built React code from the previous stage to the Nginx server directory
+COPY --from=builder /usr/src/app/build /usr/share/nginx/html
 
-# Copy the built React code from the previous stage
-COPY --from=build /usr/src/app/build ./build
+# Expose the port that Nginx listens on
+EXPOSE 80
 
-# Install serve globally
-RUN npm install -g serve
-
-# Expose port 80
-EXPOSE 3000
-
-# Serve the built React code on port 80
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Command to start Nginx when the container starts
+CMD ["nginx", "-g", "daemon off;"]

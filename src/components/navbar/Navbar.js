@@ -5,7 +5,7 @@ import {useEffect, useState} from "react";
 export default function Navbar() {
     const [blogURL, setBlog] = useState([])
     useEffect(() => {
-        fetch(process.env.REACT_APP_ABOUT_PATH).then(res => res.json().then(r => {
+        fetch(`https://raw.githubusercontent.com/${process.env.REACT_APP_DATA_GITHUB}/master/data/about.json`).then(res => res.json().then(r => {
             setBlog(r.blogURL || null)
         }))
     }, [])
