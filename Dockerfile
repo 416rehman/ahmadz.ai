@@ -1,32 +1,41 @@
 # syntax=docker/dockerfile:1
 
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Dockerfile reference guide at
-# https://docs.docker.com/go/dockerfile-reference/
-
-# Want to help us make this template better? Share your feedback here: https://forms.gle/ybq9Krt8jtBL3iCk7
-FROM node:20-alpine
+FROM node:20-alpine AS build
 
 WORKDIR /usr/src/app
 
-# Download dependencies as a separate step to take advantage of Docker's caching.
-# Leverage a cache mount to /root/.npm to speed up subsequent builds.
-# Leverage a bind mounts to package.json and package-lock.json to avoid having to copy them into
-# into this layer.
-RUN --mount=type=bind,source=package.json,target=package.json \
-    --mount=type=bind,source=package-lock.json,target=package-lock.json \
-    --mount=type=cache,target=/root/.npm \
-    npm ci --omit=dev
-RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
+# Copy package.json and package-lock.json separately to leverage caching
+COPY package.json .
+COPY package-lock.json .
 
-# Run the application as a non-root user.
-USER node
+# Install dependencies
+RUN npm ci --omit=dev
 
 # Copy the rest of the source files into the image.
 COPY . .
 
-# Expose the port that the application listens on.
-EXPOSE 3000
+# Check if .env file exists, raise error if not found
+RUN test -f .env || (echo "ERROR: .env file not found" && exit 1)
 
-# Run the application.
-CMD npm start
+# Copy the .env file into the image
+COPY .env .env
+
+# Build the React code
+RUN npm run build
+
+# Stage 2 - Serve the built React code
+FROM node:20-alpine
+
+WORKDIR /usr/src/app
+
+# Copy the built React code from the previous stage
+COPY --from=build /usr/src/app/build ./build
+
+# Install serve globally
+RUN npm install -g serve
+
+# Expose port 80
+EXPOSE 80
+
+# Serve the built React code on port 80
+CMD ["serve", "-s", "build", "-l", "80"]
