@@ -35,7 +35,7 @@ COPY --from=build /usr/src/app/build ./build
 RUN npm install -g serve
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 3000
 
 # Serve the built React code on port 80
-CMD ["serve", "-s", "build", "-l", "80"]
+CMD ["serve", "-s", "build", "-l", "3000"]
