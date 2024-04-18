@@ -7,14 +7,14 @@ WORKDIR /usr/src/app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Check if .env file exists
-RUN test -f .env || (echo "Error: .env file not found" && false)
-
 # Install dependencies
 RUN npm ci --omit=dev
 
 # Copy the rest of the source code
 COPY . .
+
+# Check if .env file exists
+RUN test -f .env || (echo "Error: .env file not found" && false)
 
 # Build the React code
 RUN npm run build
