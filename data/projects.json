@@ -13,7 +13,7 @@
       "docker",
       "express",
       "postman",
-      "nginx",
+      "nginx"
     ],
     "links": {
       "github": "https://i.imgur.com/EQQt5HP.png",
