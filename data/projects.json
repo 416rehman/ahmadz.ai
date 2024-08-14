@@ -17,7 +17,7 @@
     ],
     "links": {
       "github": "https://contractrpro.ahmadz.ai/",
-      "demo": "https://contractrpro.ahmadz.ai/",
+      "demo": "",
       "more": "https://www.figma.com/file/qX72J11MT6G4RyHy52FWg0/ContractorPro?type=design&mode=design&t=0Z4TpjSG9oNGGMCE-0"
     }
   },
@@ -83,7 +83,7 @@
     ],
     "links": {
       "github": "https:\/\/github.com\/416rehman\/Rest-Inn\/tree\/main\/api",
-      "demo": "https:\/\/rest-inn.herokuapp.com\/",
+      "demo": "",
       "more": ""
     }
   },
@@ -147,7 +147,7 @@
     ],
     "links": {
       "github": "https:\/\/github.com\/416rehman\/pong\"",
-      "demo": "https:\/\/www.ahmadz.ai\/pong\/",
+      "demo": "",
       "more": ""
     }
   },
@@ -167,8 +167,8 @@
     "image": "https:\/\/i.imgur.com\/HFiua2j.png",
     "links": {
       "github": "https:\/\/github.com\/416rehman\/easy_blog",
-      "demo": "https:\/\/blog.ahmadz.ai\/",
-      "more": "https:\/\/blog.ahmadz.ai\/hello-world\/"
+      "demo": "",
+      "more": ""
     }
   },
   {
@@ -184,7 +184,7 @@
     "links": {
       "github": "https:\/\/github.com\/416rehman\/SDL2-Pong",
       "demo": "https:\/\/github.com\/416rehman\/SDL2-Pong\/releases",
-      "more": "https:\/\/blog.ahmadz.ai\/sdl2-for-clion-and-cmake\/"
+      "more": ""
     }
   },
   {
@@ -199,7 +199,7 @@
     "links": {
       "github": "",
       "demo": "",
-      "more": "https:\/\/blog.ahmadz.ai\/managing-military-equipment-by-using-microsoft-access-as-an-ims\/"
+      "more": ""
     }
   },
   {
@@ -235,7 +235,7 @@
     "image": "https:\/\/images.discordapp.net\/avatars\/842244538248593439\/9dad36f652f0c501470d9046f69394b9.png?size=128",
     "links": {
       "github": "https:\/\/github.com\/certifiedrehman\/splite",
-      "demo": "https:\/\/discord.com\/oauth2\/authorize?client_id=842244538248593439&permissions=4294438903&scope=bot%20applications.commands",
+      "demo": "",
       "more": "https:\/\/top.gg\/bot\/842244538248593439"
     }
   },
@@ -255,7 +255,7 @@
   },
   {
     "title": "Basic Auth Web App",
-    "description": "A Simple Basic CRUD App using ExpressJS to serve handlebars views with data from MongoDB, PostgreSQL databases for WEB322 class.",
+    "description": "A Simple Basic CRUD App using ExpressJS to serve handlebars views with data from MongoDB, and PostgreSQL databases.",
     "label": "School Work",
     "madeWith": [
       "mongodb",
@@ -267,7 +267,7 @@
     "image": "",
     "links": {
       "github": "https:\/\/github.com\/416rehman\/web322FinalAssignment",
-      "demo": "https:\/\/a3ahmadzai.herokuapp.com\/",
+      "demo": "",
       "more": ""
     }
   },
@@ -285,7 +285,7 @@
     "image": "https:\/\/i.imgur.com\/rCaTQ22.png",
     "links": {
       "github": "https:\/\/github.com\/certifiedrehman\/Vacay",
-      "demo": "http:\/\/web322.ahmadz.ai\/",
+      "demo": "",
       "more": ""
     }
   }
