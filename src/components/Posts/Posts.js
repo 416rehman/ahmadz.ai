@@ -35,5 +35,5 @@ export default function Posts(props) {
                 }}>View More <FiExternalLink size={30}/></button>
             </a>
         </div>
-    ) : (<div>Loading</div>)
+    ) : ()
 }
